@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+	<div	class="box" >
+		<h1 style="color:red;text-align: center">Add Product</h1>
+		<form th:action="@{/Add_product}" method="post" enctype="multipart/form-data">
+			<label for="masp">Loai:</label><select name="masp"  style="margin-bottom: 15px;">
+				<option value="fashion">Fashion</option>
+				<option value="food">Food</option>
+				<option value="pet">Pet</option>
+				<option value="sport">Sport</option>
+			</select><br>
+			<input type="text" name="tensp" placeholder="Ten San Pham"><br>
+			<input type="text" name="gia" placeholder="Gia San Pham"><br>
+			<label for="url">Chon Anh: &nbsp</label> <input type="file" name="url" placeholder="insert url for product image"><br>
+			<input type="submit" value="Add Product" style="margin-top: 30px;background-color: gray;color:black;padding:5px;">
+		</form>
+	</div>
+</body>
+</html>

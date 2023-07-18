@@ -1,0 +1,131 @@
+@charset "ISO-8859-1";
+header{
+	color:white;
+	font-size: 30px;
+}
+a{
+	text-decoration: none;
+}
+header .header_section1{
+	display:flex;
+	justify-content: space-around;
+	height:60px;
+	align-items:center;
+	background-color: #515151;
+	
+}
+header input[type="text"] {
+	padding:10px;
+	font-size:25px;
+	background-color: #515151;
+}
+header input[type="submit"] {
+	padding:10px;
+	font-size:25px;
+	
+}
+header .header_section2{
+	display:flex;
+	justify-content: space-between;
+	height:200px;
+	background-color: red;
+	box-shadow: 0px 0px 20px #b6b6b6;
+	align-items: center;
+	
+}
+header .header_section2 a{
+	text-decoration: none;
+	padding:5px;
+	border:black 3px solid;
+	background-color: white;
+}
+nav{
+	display:flex;
+	flex-direction: column;
+	border:black solid 1px;
+	width:150px;
+	height: 150px;
+	position: fixed;
+	top:350px;
+	left:50px;
+	padding:5px;
+}
+nav .index{
+	height:30px;
+	
+}
+nav .index:hover{
+	background-color: #dddddd;
+	cursor: pointer;
+}
+.items{
+	position: relative;
+	left: 320px;
+    top: 20px;
+    padding:15px;
+    display: flex;
+    float:left;
+    flex-wrap:wrap;
+    background-color: #e7e7e7;
+    width:1050px;
+    box-shadow: -10px -10px 30px #8c8c8c;
+    margin:5px;
+}
+.item{
+	width:300px;
+	height:250px;
+	border:black solid 2px;
+	margin:10px;
+	text-align: center;
+	padding:10px;
+	margin:10px;
+	background-color: white
+	
+}
+.item input[type="submit"]{
+	padding: 10px;
+	margin-top:20px;
+	background-color: red;
+	width:100px;
+}
+.index a{
+	color:black;
+}
+/*gio_hang*/
+.box{
+	width:600px;
+	max-height: 500px;
+	position: relative;
+	top:100px;
+	left: 500px;
+	border:solid black 2px;
+	box-shadow: 0px 0px 15px red;
+	padding:20px;
+	overflow: scroll;
+	opacity: 1;
+}
+td{
+	width:150px;
+}
+.small_box{
+	display: flex;
+	padding:10px;
+	margin-bottom: 10px;
+}
+ .item_gio{
+ text-align:center;
+	width:100px;
+}
+.add_button{
+	position: absolute;
+	top:300px;
+	left:50px;
+	border: solid black 2px;
+	background-color: #00ff00;
+	width:150px;
+	padding:5px;
+}
+.box input[type="text"]{
+	padding:5px;
+	margin-bottom:15px;
+}

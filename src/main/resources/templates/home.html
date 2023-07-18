@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="style2.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+	<header>
+		<div class="header_section1">
+			<div>
+				<i class='bx bx-envelope' ></i>dovantuan29052002@gmail.com
+				<i class='bx bx-phone' ></i>0564 037 865
+			</div>
+			<form th:action="@{/search}">
+				<input type="text" name="keyword" placeholder="Search...">
+				<input type="submit">
+			</form>
+		</div>
+		<div class="header_section2">
+			<div style="background-color: white;display:flex;align-items: center;width:25%;justify-content: center;height: 100%">
+				<img alt="abc" src="images/logo2.jpg" width="100px">
+			</div>
+			<a th:href="@{/xem_gio_hang}" ><i class='bx bxs-cart'></i> xem gio hang</a>
+		</div>
+	</header>
+	<div >
+			<form th:action="@{/Add_product}">
+				<input type="submit" value="Add New Product" class="add_button">
+			</form>
+		</div>
+	<nav>
+		
+		<div ><i class='bx bx-list-ul'></i> Danh Muc<hr></div>
+		<div class="index"><a th:href="@{/thoi_trang}"><i class='bx bx-closet'></i> Thoi trang</a></div>
+		<div class="index"><a th:href="@{/food}"><i class='bx bx-dish'></i> Do an</a></div>
+		<div class="index"><a th:href="@{/sport}"><i class='bx bxs-basketball'></i> The thao</a></div>
+		<div class="index"><a th:href="@{/pet}"><i class='bx bxs-dog'></i> Dong vat</a></div>
+	</nav>
+	
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body >
+	<form th:action="@{/authentication}" method="post" th:object="${user}" class="login_box">
+		<input type="text" name="username" th:field="*{username}" placeholder="USERNAME" > <br>
+		<input type="password" name="pass" th:field="*{pass}" placeholder="PASSWORD">	<br>
+		<span th:text="${authen}" style="color: red"></span>
+		<div style="display: flex;justify-content: space-between;margin-left: 30px;width:350px;margin-top: 30px">
+		 <span style=""><input type="checkbox" name="write_cookies" value="true"  style="margin-top: 10px"> Remember me</span>
+		 <input type="submit" value="login">
+		</div>
+		<p>You don't have account? <a th:href="@{/sign_up}">Sign up</a></p>
+	</form>
+</body>
+</html>

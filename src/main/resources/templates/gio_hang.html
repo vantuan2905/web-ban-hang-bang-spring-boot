@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link rel="stylesheet" href="style2.css">
+</head>
+<body >
+	<div class="box" >
+	<div class="small_box" style="border-bottom: black solid 3px">
+				<div class="item_gio"><b>Ten San Pham</b></span></div>
+						<div  class="item_gio"><b>Gia</b></div>
+						<div class="item_gio">
+						</div>
+						<div class="item_gio">
+						</div>
+						<div class="item_gio"><b>So Luong</b></div>
+						<div class="item_gio"><b>Thanh Tien</b5></div>
+						<hr>
+		</div>
+				<div th:each="item:${items}" class="small_box">
+						<div class="item_gio"><span th:text="${item.getSp().tensp}"></span></div>
+						<div  class="item_gio"><span th:text="${item.getSp().gia}"></span></div>
+						<div class="item_gio">
+							<form th:action="@{/change_sl}" style="float:left">
+								<input type="hidden" name="page" th:value="${page}">
+								<input type="hidden" name="maHD" th:value="${item.getMaHoaDon().maHD}">
+								<input type="hidden" name="maSP" th:value="${item.getSp().masp}">
+								<input type="hidden" name="action" value="tang">
+								<input type="submit" name="tang" value="+">
+							</form>
+							<form th:action="@{/change_sl}" style="float:left">
+								<input type="hidden" name="page" th:value="${page}">
+								<input type="hidden" name="maHD" th:value="${item.getMaHoaDon().maHD}">
+								<input type="hidden" name="maSP" th:value="${item.getSp().masp}">
+								<input type="hidden" name="action" value="giam">
+								<input type="submit" value="-">
+							</form>
+						</div>
+						<div class="item_gio">
+							<form th:action="@{/xoa}">
+								<input type="hidden" name="page" th:value="${page}">
+								<input type="hidden" name="maHD" th:value="${item.getMaHoaDon().maHD}">
+								<input type="hidden" name="maSP" th:value="${item.getSp().masp}">
+								<input type="submit" name="xoa" value="x" style="background-color: red;border: solid black 2px;">
+							</form>
+						</div>
+						<div class="item_gio"><span th:text="${item.sl}"></span></div>
+						<div class="item_gio"><span th:text="${item.sl*item.getSp().gia}"></span></div>
+						<hr>
+				</div>
+				<hr>
+				<label><b>Total:</b>&nbsp</label><span th:text="${total}"></span>
+				<label><a th:href="@{/quay_lai(page=${page})}">quay lai</a>&nbsp</label>
+				
+	</div>
+	
+</body>
+</html>
